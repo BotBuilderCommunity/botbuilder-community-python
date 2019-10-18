@@ -35,6 +35,9 @@ class NumberWithUnitPrompt(Prompt):
         ):
         super().__init__(dialog_id, validator)
 
+        if default_locale is None:
+            default_locale = Culture.English
+            
         self._default_locale = default_locale 
         self._prompt_type  = prompt_type
 
@@ -68,11 +71,8 @@ class NumberWithUnitPrompt(Prompt):
         if turn_context.activity.type == ActivityTypes.message:
             utterance = turn_context.activity.text
             
-            if turn_context.activity.locale is not None:
-                turn_context.activity.locale = self._default_locale 
-            else:
-                turn_context.activity.locale = Culture.English
-
+            turn_context.activity.locale = self._default_locale 
+            
             recognizer_result = PromptRecognizerResult()        
 
             recognizer = NumberWithUnitRecognizer(turn_context.activity.locale)
