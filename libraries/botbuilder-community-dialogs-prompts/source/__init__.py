@@ -6,6 +6,9 @@ from numberwithunit_prompt import (
    NumberWithTypePrompt)
 
 __all__ = [
-    "NumberWithUnitPrompt","NumberWithUnitPromptType","NumberWithUnitResult",
-    "NumberWithTypePromptType","NumberWithTypePrompt"
+    "NumberWithUnitPrompt",
+	"NumberWithUnitPromptType",
+	"NumberWithUnitResult",
+    "NumberWithTypePromptType",
+	"NumberWithTypePrompt"
     ]
