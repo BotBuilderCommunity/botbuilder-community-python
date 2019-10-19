@@ -41,7 +41,8 @@ For example, if a user enters "twenty three dollars" when you are using the Curr
 
 ```python
 result = f"currency : {turn_context.result.value} and unit : {turn_context.result.unit}"
-await turn_context.send_activity(result)```
+await turn_context.send_activity(result)
+```
 
 ## Number with Type
 
