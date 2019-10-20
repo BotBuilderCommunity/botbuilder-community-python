@@ -52,6 +52,13 @@ Number with type allows you to accept numbers from the follow type enum:
 * Percentage
 
 ```python
-dialogs.add(new NumberWithTypePrompt('numberPrompt', NumberWithTypePrompt.Ordinal);
+dialogs.add(new NumberWithTypePrompt('numberPrompt', NumberWithTypePromptType.Ordinal);
 ```
-The prompt will return a value
+The prompt will a return a result based on the NumberWithTypePromptType type. 
+For example , If user enters “eleventh” Ordinal type return the result as 11.
+Below is an example of how you might use this result.
+
+```python
+result = step_context.result
+await turn_context.send_activity(result)
+```
