@@ -3,6 +3,7 @@ from number_with_unit_prompt import NumberWithUnitPrompt, NumberWithUnitPromptTy
 from phone_prompt import PhoneNumberPrompt
 from email_prompt import EmailPrompt
 from internet_protocol_prompt import InternetProtocolPrompt,InternetProtocolPromptType
+from guid_prompt import GuidPrompt
    
 __all__ = [
     "NumberWithUnitPrompt",
@@ -13,5 +14,6 @@ __all__ = [
     "PhoneNumberPrompt",
     "EmailPrompt",
     "InternetProtocolPrompt",
-    "InternetProtocolPromptType"
+    "InternetProtocolPromptType",
+    "GuidPrompt"
     ]
