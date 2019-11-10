@@ -65,7 +65,7 @@ await turn_context.send_activity(result)
 
 ## Phone Number
 
-The 'PhoneNumberPrompt' will extract a phone number from a message from the user.
+The `PhoneNumberPrompt` will extract a phone number from a message from the user.
 
 ```python
 dialogs.add(new PhoneNumberPrompt('phprompt');
@@ -95,7 +95,7 @@ EmailPrompt return as r.vinoth@live.com
 
 ## Internet Protocols
 
-The 'InternetProtocolPrompt' will extract one of the following types based on which InternetProtocolPromptType enum value is passed in:
+The `InternetProtocolPrompt` will extract one of the following types based on which InternetProtocolPromptType enum value is passed in:
 
 * IPAddress
 * URL
