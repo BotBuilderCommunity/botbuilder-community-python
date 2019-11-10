@@ -62,3 +62,65 @@ Below is an example of how you might use this result.
 result = step_context.result
 await turn_context.send_activity(result)
 ```
+
+## Phone Number
+
+The `PhoneNumberPrompt` will extract a phone number from a message from the user.
+
+```python
+dialogs.add(new PhoneNumberPrompt('phprompt');
+```
+
+Example
+
+```python
+User : My phone number is 1 (877) 609-2233
+PhoneNumberPrompt return as 1 (877) 609-2233
+```
+
+## Email Address
+
+The `EmailPrompt` will extract an email address from a message from the user.
+
+```python
+dialogs.add(new EmailPrompt('eprompt');
+```
+
+Example
+
+```python
+User : My email id is r.vinoth@live.com
+EmailPrompt return as r.vinoth@live.com
+```
+
+## Internet Protocols
+
+The `InternetProtocolPrompt` will extract one of the following types based on which InternetProtocolPromptType enum value is passed in:
+
+* IPAddress
+* URL
+
+```python
+dialogs.add(InternetProtocolPrompt("urlprompt",InternetProtocolPromptType.URL))
+```
+Example
+
+```python
+User : My favorite web site is http://rvinothrajendran.github.io/
+InternetProtocolPrompt return as http://rvinothrajendran.github.io/
+```
+
+## GUID
+
+The `GUIDPrompt` will extract a GUID from a message from the user.
+
+```python
+dialogs.add(new GuidPrompt('gprompt');
+```
+
+Example
+
+```python
+User : my azure id is "7d7b0205-9411-4a29-89ac-b9cd905886fa"
+GUIDPrompt return as "7d7b0205-9411-4a29-89ac-b9cd905886fa"
+```
