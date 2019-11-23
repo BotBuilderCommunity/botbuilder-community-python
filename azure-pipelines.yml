@@ -22,7 +22,6 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     pip install pytest pytest-azurepipelines
-    pip install -e .\libraries\botbuilder-community-dialogs-prompts\source
   displayName: 'Install dependencies'
 
 - script: |
