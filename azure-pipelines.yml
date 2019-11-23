@@ -25,6 +25,9 @@ steps:
     pip install aiounittest
     pip install botbuilder
     pip install asyncio
+    pip install botbuilder.dialogs
+    pip install botbuilder.core.adapters
+    pip install botbuilder.schema
   displayName: 'Install dependencies'
 
 - script: |
