@@ -23,6 +23,8 @@ steps:
     python -m pip install --upgrade pip
     pip install pytest pytest-azurepipelines
     pip install aiounittest
+    pip install botbuilder
+    pip install asyncio
   displayName: 'Install dependencies'
 
 - script: |
