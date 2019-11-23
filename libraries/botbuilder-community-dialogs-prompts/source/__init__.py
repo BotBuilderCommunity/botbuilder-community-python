@@ -1,3 +1,4 @@
+from .about import __version__
 from number_with_type_prompt import NumberWithTypePrompt, NumberWithTypePromptType
 from number_with_unit_prompt import NumberWithUnitPrompt, NumberWithUnitPromptType,NumberWithUnitResult
 from phone_prompt import PhoneNumberPrompt
@@ -15,5 +16,6 @@ __all__ = [
     "EmailPrompt",
     "InternetProtocolPrompt",
     "InternetProtocolPromptType",
-    "GuidPrompt"
+    "GuidPrompt",
+    "__version__"
     ]

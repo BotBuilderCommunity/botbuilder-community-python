@@ -5,13 +5,16 @@
 
 trigger:
 - master
+- develop
+- release/*
+- feature/*
 
 pool:
   vmImage: 'ubuntu-latest'
 strategy:
   matrix:
     Python37:
-      python.version: '3.7'
+      python.version: '3.7.5'
 
 steps:
 - task: UsePythonVersion@0
@@ -21,10 +24,24 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
+    pip install -e ./libraries/botbuilder-community-dialogs-prompts
     pip install pytest pytest-azurepipelines
-    pip install -e .\libraries\botbuilder-community-dialogs-prompts\source
+    pip install coveralls
+    pip install pylint
+    pip install pytest
+    pip install pytest-cov
   displayName: 'Install dependencies'
 
 - script: |
-    python -m pytest libraries/
-  displayName: 'pytest'
+   pytest --junitxml=junit/test-results.xml --cov-config=.coveragerc --cov --cov-report=xml --cov-report=html
+  displayName: Pytest
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results **/test-results.xml'
+  inputs:
+    testResultsFiles: '**/test-results.xml'
+    testRunTitle: 'Python $(python.version)'
+
+- script: 'COVERALLS_REPO_TOKEN=sB4xSe7ZSZE3VgaoGvi7MVApbZD2x0n2T coveralls'
+  displayName: 'Push test results to coveralls https://coveralls.io/github/BotBuilderCommunity/botbuilder-community-python'
+  continueOnError: true
