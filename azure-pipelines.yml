@@ -22,12 +22,7 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     pip install pytest pytest-azurepipelines
-    pip install aiounittest
-    pip install botbuilder
-    pip install asyncio
-    pip install botbuilder.dialogs
-    pip install botbuilder.core.adapters
-    pip install botbuilder.schema
+    pip install -e .\libraries\botbuilder-community-dialogs-prompts\
   displayName: 'Install dependencies'
 
 - script: |
