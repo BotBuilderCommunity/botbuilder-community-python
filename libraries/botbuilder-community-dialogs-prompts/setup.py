@@ -13,7 +13,7 @@ TESTS_REQUIRES = ["aiounittest>=1.3.0"]
 
 root = os.path.abspath(os.path.dirname(__file__))
 
-with open(os.path.join(root, "source", "about.py")) as f:
+with open(os.path.join(root, "botbuilder", "community", "dialogs", "prompts", "about.py")) as f:
     package_info = {}
     info = f.read()
     exec(info, package_info)
@@ -32,7 +32,7 @@ setup(
     long_description_content_type="text/markdown",
     license=package_info["__license__"],
     packages=[
-        "source",
+        "botbuilder.community.dialogs.prompts",
     ],
     install_requires=REQUIRES + TESTS_REQUIRES,
     tests_require=TESTS_REQUIRES,
