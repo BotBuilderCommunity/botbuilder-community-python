@@ -5,7 +5,7 @@ import aiounittest
 import asyncio
 
 current = pathlib.Path(__file__).parent.parent
-libpath = current.joinpath("source")
+libpath = current.joinpath("botbuilder").joinpath("community").joinpath("dialogs").joinpath("prompts")
 sys.path.append(str(libpath))
 
 from botbuilder.dialogs.prompts import (
