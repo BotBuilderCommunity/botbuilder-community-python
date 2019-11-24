@@ -8,6 +8,12 @@ You can install this library via PIP:
 
     pip install botbuilder-community-dialogs-prompts
 
+You can then import required types, for example:
+
+```python
+    from botbuilder.community.dialogs.prompts import NumberWithUnitPrompt, NumberWithUnitPromptType
+```
+
 ## Number with Unit
 
 The number with unit prompt allows you to prompt for four different unit types:

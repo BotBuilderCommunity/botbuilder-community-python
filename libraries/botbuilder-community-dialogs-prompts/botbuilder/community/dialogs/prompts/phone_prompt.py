@@ -12,7 +12,7 @@ from typing import Callable, Dict
 
 class PhoneNumberPrompt (Prompt):
     def __init__(
-        self, 
+        self,
         dialog_id,
         validator : object = None,
         default_locale = None):
