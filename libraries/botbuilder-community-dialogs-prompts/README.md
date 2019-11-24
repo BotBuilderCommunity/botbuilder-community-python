@@ -2,13 +2,11 @@
 
 This is a (currently experimental) suite of dialog prompts that uses Microsoft's recognizer text suite to recognize certain types of input during a dialog prompt. Microsoft's Bot Framework team has implemented a handful of prompts using recognizers from the recognizer text suite. This library is meant to fill the gaps.
 
-> Currently, this library and subsequent PIP are experimental. Please use at your own risk. Feel free to test, debug, and submit pull requests if you come across any issues.
-
 ## Installation
 
 You can install this library via PIP:
 
-    ## Coming soon
+    pip install botbuilder-community-dialogs-prompts
 
 ## Number with Unit
 
