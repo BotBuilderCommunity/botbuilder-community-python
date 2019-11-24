@@ -13,4 +13,4 @@ The following dialogs are currently available;
 
 | Name | Description | Sample | PIP |
 | ---- | ----------- | ------- | --- |
-| [@botbuildercommunity/dialog-prompts](libraries/botbuilder-community-dialogs-prompts/README.md) | A variety of prompts using the [Microsoft Recognizers Text](https://github.com/microsoft/Recognizers-Text) suite, such as currency, temperature, age and dimension.  | coming soon | coming soon |
+| [@botbuildercommunity/dialog-prompts](libraries/botbuilder-community-dialogs-prompts/README.md) | A variety of prompts using the [Microsoft Recognizers Text](https://github.com/microsoft/Recognizers-Text) suite, such as currency, temperature, age and dimension.  | coming soon | https://pypi.org/project/botbuilder-community-dialogs-prompts/0.1.1/ |
