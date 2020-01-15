@@ -11,7 +11,7 @@ You can install this library via PIP:
 You can then import required types, for example:
 
 ```python
-    from botbuilder.community.dialogs.prompts import NumberWithUnitPrompt, NumberWithUnitPromptType
+   from botbuilder.community.dialogs.prompts import NumberWithUnitPrompt, NumberWithUnitPromptType
 ```
 
 ## Number with Unit
@@ -24,7 +24,7 @@ The number with unit prompt allows you to prompt for four different unit types:
 * Dimension (eg. miles / meters)
 
 ```python
-dialogs.add(new NumberWithUnitPrompt('numberPrompt', NumberWithUnitPromptType.Currency);
+self._dialogs.add(NumberWithUnitPrompt('numberPrompt',NumberWithUnitPromptType.Currency))
 ```
 
 Then, you can call the bot by specifying your PromptOptions and calling PromptAsync.
@@ -56,7 +56,7 @@ Number with type allows you to accept numbers from the follow type enum:
 * Percentage
 
 ```python
-dialogs.add(new NumberWithTypePrompt('numberPrompt', NumberWithTypePromptType.Ordinal);
+self._dialogs.add(NumberWithTypePrompt(numberunit,NumberWithTypePromptType.Ordinal))
 ```
 The prompt will a return a result based on the NumberWithTypePromptType type. 
 For example , If user enters “eleventh” Ordinal type return the result as 11.
@@ -72,7 +72,7 @@ await turn_context.send_activity(result)
 The `PhoneNumberPrompt` will extract a phone number from a message from the user.
 
 ```python
-dialogs.add(new PhoneNumberPrompt('phprompt');
+self._dialogs.add(PhoneNumberPrompt('phprompt'))
 ```
 
 Example
@@ -87,7 +87,7 @@ PhoneNumberPrompt return as 1 (877) 609-2233
 The `EmailPrompt` will extract an email address from a message from the user.
 
 ```python
-dialogs.add(new EmailPrompt('eprompt');
+self._dialogs.add(EmailPrompt('eprompt'))
 ```
 
 Example
@@ -105,7 +105,7 @@ The `InternetProtocolPrompt` will extract one of the following types based on wh
 * URL
 
 ```python
-dialogs.add(InternetProtocolPrompt("urlprompt",InternetProtocolPromptType.URL))
+self._dialogs.add(InternetProtocolPrompt('urlprompt',InternetProtocolPromptType.URL))
 ```
 Example
 
@@ -119,7 +119,7 @@ InternetProtocolPrompt return as http://rvinothrajendran.github.io/
 The `GUIDPrompt` will extract a GUID from a message from the user.
 
 ```python
-dialogs.add(new GuidPrompt('gprompt');
+self._dialogs.add(GuidPrompt('gprompt'))
 ```
 
 Example
