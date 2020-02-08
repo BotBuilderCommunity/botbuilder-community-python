@@ -6,10 +6,10 @@ REQUIRES = [
 "botbuilder-schema>=4.5.0b5",
 "botbuilder-dialogs>=4.5.0b5",
 "recognizers_text_suite>=1.0.2a2",
-"aiounittest>=1.3.0"
+"aiounittest==1.3.0"
 ]
 
-TESTS_REQUIRES = ["aiounittest>=1.3.0"]
+TESTS_REQUIRES = ["aiounittest==1.3.0"]
 
 root = os.path.abspath(os.path.dirname(__file__))
 
